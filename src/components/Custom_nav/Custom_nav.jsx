@@ -16,7 +16,7 @@ const Custom_nav = () => {
   ];
 
   return (
-    <nav>
+    <nav className="text-white p-6">
       <div className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
         {
             open === true ? 
@@ -24,7 +24,7 @@ const Custom_nav = () => {
              : <RiMenu2Line></RiMenu2Line>
         }
       </div>
-      <ul className="md:flex">
+      <ul className={`md:flex absolute md:static bg-slate-500 px-6 ${open ? '': 'hidden'}`}>
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
