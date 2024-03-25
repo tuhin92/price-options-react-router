@@ -24,7 +24,7 @@ const Custom_nav = () => {
              : <RiMenu2Line></RiMenu2Line>
         }
       </div>
-      <ul className={`md:flex absolute md:static bg-slate-500 px-6 ${open ? '': 'hidden'}`}>
+      <ul className={`md:flex absolute md:static bg-slate-500 p-6 ${open ? '': 'hidden'}`}>
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
